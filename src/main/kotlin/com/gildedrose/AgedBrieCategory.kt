@@ -6,6 +6,6 @@ class AgedBrieCategory: Category {
     }
 
     override fun updateSellInPassed(item: Item) {
-        // do nothing, as we already incremented the quality before
+        item.incrementQuality()
     }
 }

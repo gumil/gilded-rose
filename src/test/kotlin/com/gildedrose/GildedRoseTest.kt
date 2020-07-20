@@ -110,6 +110,29 @@ class GildedRoseTest {
     }
 
     @Test
+    fun `"Aged Brie" actually increases in Quality the older it gets and passed sell in date`() {
+        val days = 15
+        val sellIn1 = 10
+        val sellIn2 = 15
+        val quality1 = 20
+        val quality2 = 30
+        val item1 = Item(AGED_BRIE, sellIn1, quality1)
+        val item2 = Item(AGED_BRIE, sellIn2, quality2)
+        val items = arrayOf(item1, item2)
+        val expectedItem1 = Item(AGED_BRIE, sellIn1 - days, 40)
+        val expectedItem2 = Item(AGED_BRIE, sellIn2 - days, quality2 + days)
+
+        val gildedRose = GildedRose(items)
+
+        repeat(days) {
+            gildedRose.updateQuality()
+        }
+
+        assertEquals(expectedItem1, item1)
+        assertEquals(expectedItem2, item2)
+    }
+
+    @Test
     fun `The Quality of an item is never more than 50`() {
         val days = Random.nextInt(1, 10)
         val sellIn1 = 10
