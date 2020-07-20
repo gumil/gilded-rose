@@ -1,6 +1,6 @@
 package com.gildedrose
 
-class BackstageCategory: Category {
+object BackstageCategory: Category {
     override fun updateQuality(item: Item) {
         item.incrementQuality()
 

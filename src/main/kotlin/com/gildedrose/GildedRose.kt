@@ -16,11 +16,11 @@ class GildedRose(
 
     private fun getCategoryForItem(item: Item): Category {
         return when {
-            item.name == AGED_BRIE -> AgedBrieCategory()
-            item.name == BACKSTAGE_PASSES -> BackstageCategory()
-            item.name == SULFURAS -> SulfurasCategory()
-            item.name.startsWith(CONJURED) -> ConjuredCategory()
-            else -> RegularCategory()
+            item.name == AGED_BRIE -> AgedBrieCategory
+            item.name == BACKSTAGE_PASSES -> BackstageCategory
+            item.name == SULFURAS -> SulfurasCategory
+            item.name.startsWith(CONJURED) -> ConjuredCategory
+            else -> RegularCategory
         }
     }
 }

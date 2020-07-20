@@ -1,6 +1,6 @@
 package com.gildedrose
 
-class RegularCategory: Category {
+object RegularCategory: Category {
     override fun updateQuality(item: Item) {
         item.decrementQuality()
     }

@@ -1,6 +1,6 @@
 package com.gildedrose
 
-class SulfurasCategory: Category {
+object SulfurasCategory: Category {
     override fun updateQuality(item: Item) {
         // do nothing because it's a legendary item
     }

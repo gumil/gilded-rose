@@ -1,6 +1,6 @@
 package com.gildedrose
 
-class AgedBrieCategory: Category {
+object AgedBrieCategory: Category {
     override fun updateQuality(item: Item) {
         item.incrementQuality()
     }

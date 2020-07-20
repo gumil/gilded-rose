@@ -1,6 +1,6 @@
 package com.gildedrose
 
-class ConjuredCategory: Category {
+object ConjuredCategory: Category {
     override fun updateQuality(item: Item) {
         item.decrementQuality(2)
     }
