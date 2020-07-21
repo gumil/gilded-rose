@@ -185,3 +185,14 @@ With few adjustments to make sure the `Conjured` category is being properly hand
 
 The changes can be viewed in this [commit](https://github.com/gumil/gilded-rose/commit/2639c1427f00101c255beafcfd668d2cd24ee659).
 
+## Immutability
+The problem with the current solution and the previous one was the mutability. In bigger projects, passing mutable objects
+is dangerous. This makes it hard for debugging and can lead to bugs that are hard to reproduce. This is also true when
+having projects that deals with concurrency. It can happen that the same array can be updated in multiple concurrent executions.
+This situation leads to unexpected mutations to the items and having unexpected results.
+
+Although this kata is a simple project that is neither big in scale nor deals with concurrency. The solution presented
+is already enough and not over engineered. It's a solution that is maintainable and works.
+
+There's another [branch](https://github.com/gumil/gilded-rose/tree/immutable) that solves this mutability issues.
+All objects are immutable and on every operation it creates a new object.
