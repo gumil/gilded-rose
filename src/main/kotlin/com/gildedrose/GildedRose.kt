@@ -9,7 +9,7 @@ class GildedRose(
             category.updateQuality(item)
             category.updateSellIn(item)
             if (item.sellIn < 0) {
-                category.updateSellInPassed(item)
+                category.updateQuality(item)
             }
         }
     }

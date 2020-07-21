@@ -8,8 +8,4 @@ object SulfurasCategory: Category {
     override fun updateSellIn(item: Item) {
         // do nothing because it's a legendary item
     }
-
-    override fun updateSellInPassed(item: Item) {
-        // do nothing because it's a legendary item
-    }
 }
