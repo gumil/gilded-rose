@@ -1,17 +1,23 @@
 package com.gildedrose
 
 class GildedRose(
-    var items: Array<Item>
+    items: Array<Item>
 ) {
+    val items get() = _items.toTypedArray()
+
+    private var _items = items.toList()
+
     fun updateQuality() {
-        items.forEach { item ->
-            val category = getCategoryForItem(item)
-            category.updateQuality(item)
-            category.updateSellIn(item)
-            if (item.sellIn < 0) {
-                category.updateQuality(item)
+        _items = _items
+            .map { item ->
+                val category = getCategoryForItem(item)
+                val newItem = category.updateSellIn(category.updateQuality(item))
+                if (newItem.sellIn < 0) {
+                    return@map category.updateQuality(newItem)
+                }
+                return@map newItem
             }
-        }
+
     }
 
     private fun getCategoryForItem(item: Item): Category {

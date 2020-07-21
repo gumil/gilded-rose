@@ -27,8 +27,8 @@ class GildedRoseTest {
             gildedRose.updateQuality()
         }
 
-        assertEquals(expectedItem1, item1)
-        assertEquals(expectedItem2, item2)
+        assertEquals(expectedItem1, gildedRose.items.first())
+        assertEquals(expectedItem2, gildedRose.items.last())
     }
 
     @Test
@@ -52,8 +52,8 @@ class GildedRoseTest {
             gildedRose.updateQuality()
         }
 
-        assertEquals(expectedItem1, item1)
-        assertEquals(expectedItem2, item2)
+        assertEquals(expectedItem1, gildedRose.items.first())
+        assertEquals(expectedItem2, gildedRose.items.last())
     }
 
     @Test
@@ -81,9 +81,9 @@ class GildedRoseTest {
             gildedRose.updateQuality()
         }
 
-        assertEquals(expectedItem1, item1)
-        assertEquals(expectedItem2, item2)
-        assertEquals(expectedItem3, item3)
+        assertEquals(expectedItem1, gildedRose.items[0])
+        assertEquals(expectedItem2, gildedRose.items[1])
+        assertEquals(expectedItem3, gildedRose.items[2])
     }
 
     @Test
@@ -105,8 +105,8 @@ class GildedRoseTest {
             gildedRose.updateQuality()
         }
 
-        assertEquals(expectedItem1, item1)
-        assertEquals(expectedItem2, item2)
+        assertEquals(expectedItem1, gildedRose.items.first())
+        assertEquals(expectedItem2, gildedRose.items.last())
     }
 
     @Test
@@ -128,8 +128,8 @@ class GildedRoseTest {
             gildedRose.updateQuality()
         }
 
-        assertEquals(expectedItem1, item1)
-        assertEquals(expectedItem2, item2)
+        assertEquals(expectedItem1, gildedRose.items.first())
+        assertEquals(expectedItem2, gildedRose.items.last())
     }
 
     @Test
@@ -151,8 +151,8 @@ class GildedRoseTest {
             gildedRose.updateQuality()
         }
 
-        assertEquals(expectedItem1, item1)
-        assertEquals(expectedItem2, item2)
+        assertEquals(expectedItem1, gildedRose.items.first())
+        assertEquals(expectedItem2, gildedRose.items.last())
     }
 
     @Test
@@ -174,8 +174,8 @@ class GildedRoseTest {
             gildedRose.updateQuality()
         }
 
-        assertEquals(expectedItem1, item1)
-        assertEquals(expectedItem2, item2)
+        assertEquals(expectedItem1, gildedRose.items.first())
+        assertEquals(expectedItem2, gildedRose.items.last())
     }
 
     @Test
@@ -197,8 +197,8 @@ class GildedRoseTest {
             gildedRose.updateQuality()
         }
 
-        assertEquals(expectedItem1, item1)
-        assertEquals(expectedItem2, item2)
+        assertEquals(expectedItem1, gildedRose.items.first())
+        assertEquals(expectedItem2, gildedRose.items.last())
     }
 
     @Test
@@ -220,8 +220,8 @@ class GildedRoseTest {
             gildedRose.updateQuality()
         }
 
-        assertEquals(expectedItem1, item1)
-        assertEquals(expectedItem2, item2)
+        assertEquals(expectedItem1, gildedRose.items.first())
+        assertEquals(expectedItem2, gildedRose.items.last())
     }
 
     @Test
@@ -243,8 +243,8 @@ class GildedRoseTest {
             gildedRose.updateQuality()
         }
 
-        assertEquals(expectedItem1, item1)
-        assertEquals(expectedItem2, item2)
+        assertEquals(expectedItem1, gildedRose.items.first())
+        assertEquals(expectedItem2, gildedRose.items.last())
     }
 
     @Test
@@ -266,7 +266,7 @@ class GildedRoseTest {
             gildedRose.updateQuality()
         }
 
-        assertEquals(expectedItem1, item1)
-        assertEquals(expectedItem2, item2)
+        assertEquals(expectedItem1, gildedRose.items.first())
+        assertEquals(expectedItem2, gildedRose.items.last())
     }
 }

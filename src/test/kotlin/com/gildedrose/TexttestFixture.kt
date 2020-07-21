@@ -25,7 +25,7 @@ fun main(args: Array<String>) {
     for (i in 0 until days) {
         println("-------- day $i --------")
         println("name, sellIn, quality")
-        for (item in items) {
+        for (item in app.items) {
             println(item)
         }
         println()

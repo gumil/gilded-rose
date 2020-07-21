@@ -1,20 +1,21 @@
 package com.gildedrose
 
 object BackstageCategory: Category {
-    override fun updateQuality(item: Item) {
+    override fun updateQuality(item: Item): Item {
         if (item.sellIn < 0) {
-            item.quality = 0
-            return
+            return Item(item.name, item.sellIn, 0)
         }
 
-        item.incrementQuality()
+        var currentItem = item.incrementQuality()
 
         if (item.sellIn < 6) {
-            item.incrementQuality()
+            currentItem = currentItem.incrementQuality()
         }
 
         if (item.sellIn < 11) {
-            item.incrementQuality()
+            currentItem = currentItem.incrementQuality()
         }
+
+        return currentItem
     }
 }

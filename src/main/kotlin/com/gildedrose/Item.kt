@@ -1,32 +1,35 @@
 package com.gildedrose
 
 data class Item(
-    var name: String,
-    var sellIn: Int,
-    var quality: Int
+    val name: String,
+    val sellIn: Int,
+    val quality: Int
 ) {
     override fun toString(): String {
         return "$name, $sellIn, $quality"
     }
 }
 
-fun Item.decrementSellIn() { sellIn-- }
+fun Item.decrementSellIn(): Item = Item(name, sellIn - 1, quality)
 
-fun Item.decrementQuality(value: Int = 1) {
-    if (quality > 0) {
-        quality -= value
+fun Item.decrementQuality(value: Int = 1): Item {
+    var currentQuality = quality
+    if (currentQuality > 0) {
+        currentQuality -= value
     }
 
     /**
      * This case can happen when value is greater than 1
      */
-    if (quality < 0) {
-        quality = 0
+    if (currentQuality < 0) {
+        currentQuality = 0
     }
+    return Item(name, sellIn, currentQuality)
 }
 
-fun Item.incrementQuality() {
+fun Item.incrementQuality(): Item {
     if (quality < 50) {
-        quality++
+        return Item(name, sellIn, quality + 1)
     }
+    return this
 }
